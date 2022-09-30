@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        "lib": ["ES2017"],
+        "target": "ES6",
+        "noEmit": true,
+        "forceConsistentCasingInFileNames": true,
+        "strict": true,
+        "alwaysStrict": true
+    },
+    "include": ["./src/**/*.ts"]
+}
