@@ -51,7 +51,7 @@ const values = {
     carry: 1
 };
 
-Adder.fullAdder(input1, values.input2, values.carry); // { sum: 1, carry: 1 }
+Adder.fullAdder(values.input1, values.input2, values.carry); // { sum: 1, carry: 1 }
 ```
 
 ## Generate 3-bit signals
