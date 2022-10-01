@@ -16,6 +16,14 @@ export function maxNumbersIn(bits: number): number {
 }
 
 /**
+ * Checks if the given number is a power of 2
+ * @param n The number to check
+ */
+export function isPowerOfTwo(n: number): boolean {
+    return n !== 0 && !(n & (n - 1));
+}
+
+/**
  * Generates a list of on-off signals for the given bit
  * @param bits The number of bits to use
  */

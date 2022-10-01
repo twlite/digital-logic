@@ -4,3 +4,5 @@ export * as Subtractor from "./subtractor/subtractor";
 export * as BitsUtil from "./utils/bits";
 export * as TruthTable from "./utils/truthTable";
 export * as NumberUtils from "./utils/numbers";
+export * as Encoder from "./coder/encoder";
+export * as Decoder from "./coder/decoder";

@@ -16,14 +16,14 @@ $ npm install digital-logic
 * ✅ Full subtractor
 * ✅ Logic gates - truth table generator
 * ✅ Signal generator
-* ✅ Bits utilities *partial*
-* ✅ Number system utilities *partial*
+* ✅ Encoder
+* ✅ Decoder
+* ✅ Bits utilities
+* ✅ Number system utilities
 
 # TODO
 * Multiplexer
 * Demultiplexer
-* Encoder
-* Decoder
 * K-Map Utilities
 * and more...
 
