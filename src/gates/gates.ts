@@ -23,7 +23,7 @@ export function validateBit(...bits: number[]) {
  */
 export function AND(a: number, b: number) {
     validateBit(a, b);
-    return +(a && b);
+    return a & b;
 }
 
 /**
@@ -33,7 +33,7 @@ export function AND(a: number, b: number) {
  */
 export function OR(a: number, b: number) {
     validateBit(a, b);
-    return +(a || b);
+    return a | b;
 }
 
 /**
@@ -71,7 +71,7 @@ export function NAND(a: number, b: number) {
  */
 export function XNOR(a: number, b: number) {
     validateBit(a, b);
-    return +(a === b);
+    return +!XOR(a, b);
 }
 
 /**
@@ -80,7 +80,7 @@ export function XNOR(a: number, b: number) {
  * @param b Input bit
  */
 export function XOR(a: number, b: number) {
-    return +!XNOR(a, b);
+    return a ^ b;
 }
 
 /**
