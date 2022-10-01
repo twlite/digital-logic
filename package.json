@@ -1,6 +1,6 @@
 {
   "name": "digital-logic",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A collection of digital logic utilities",
   "main": "./dist/main.js",
   "module": "./dist/main.mjs",
