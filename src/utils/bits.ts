@@ -20,11 +20,17 @@ export function maxNumbersIn(bits: number): number {
  * @param bits The number of bits to use
  */
 export function generateSignals(bits = 2): number[][] {
-    const signals: number[][] = Array.from({ length: maxNumbersIn(bits) }, (_, i) => {
-        const arr = i.toString(2).split("").map(m => parseInt(m));
-        return arr;
-    }).map(m => {
-        while(m.length !== bits) {
+    const signals: number[][] = Array.from(
+        { length: maxNumbersIn(bits) },
+        (_, i) => {
+            const arr = i
+                .toString(2)
+                .split("")
+                .map((m) => parseInt(m));
+            return arr;
+        }
+    ).map((m) => {
+        while (m.length !== bits) {
             if (m.length > bits) break;
             m.unshift(0);
         }

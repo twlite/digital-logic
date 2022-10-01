@@ -6,13 +6,22 @@ import { validateBit, XOR } from "../gates/gates";
  * @param n The number to convert
  */
 export function binaryToGrayCode(n: number): number {
-    return parseInt(n.toString().split("").map((m, i, a) => {
-        validateBit(parseInt(m));
-        if (i === 0) return m;
-        if (i === 1) return String(halfAdder(parseInt(a[0]), parseInt(m)).sum);
-        if (a.length === i + 1) return String(XOR(parseInt(a[i - 1]), parseInt(m)));
-        if (a[i+1] != null) return String(XOR(parseInt(m), parseInt(a[i+1])));
-    }).join(""));
+    return parseInt(
+        n
+            .toString()
+            .split("")
+            .map((m, i, a) => {
+                validateBit(parseInt(m));
+                if (i === 0) return m;
+                if (i === 1)
+                    return String(halfAdder(parseInt(a[0]), parseInt(m)).sum);
+                if (a.length === i + 1)
+                    return String(XOR(parseInt(a[i - 1]), parseInt(m)));
+                if (a[i + 1] != null)
+                    return String(XOR(parseInt(m), parseInt(a[i + 1])));
+            })
+            .join("")
+    );
 }
 
 /**
