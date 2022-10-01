@@ -10,6 +10,7 @@
   ],
   "scripts": {
     "format": "prettier --write src/**/*.ts __test__/**/*.ts",
+    "tscheck": "tsc --noEmit",
     "build": "tsup",
     "test": "vitest"
   },

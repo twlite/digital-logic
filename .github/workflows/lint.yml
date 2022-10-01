@@ -1,0 +1,29 @@
+name: Lint
+on:
+  push:
+    branches:
+      - 'main'
+  pull_request:
+    branches:
+      - 'main'
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+jobs:
+  test:
+    name: Linter
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Install Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 18
+
+      - name: 📥 Install dependencies
+        run: yarn install --immutable --immutable-cache --check-cache
+
+      - name: Run Type Checker
+        run: yarn tscheck
