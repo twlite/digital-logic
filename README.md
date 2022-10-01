@@ -73,3 +73,7 @@ BitsUtil.generateSignals(3);
 ]
 */
 ```
+
+# Contributing
+
+Please see the **[Contributing Guide](https://github.com/Archaeopteryx1/digital-logic/blob/main/CONTRIBUTING.md)** for this project.
