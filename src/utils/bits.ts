@@ -20,7 +20,7 @@ export function maxNumbersIn(bits: number): number {
  * @param n The number to check
  */
 export function isPowerOfTwo(n: number): boolean {
-    return n > 1 && !(n & (n - 1));
+    return n > 2 && !(n & (n - 1));
 }
 
 /**
