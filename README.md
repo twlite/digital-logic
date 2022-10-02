@@ -20,9 +20,9 @@ $ npm install digital-logic
 * ✅ Decoder
 * ✅ Bits utilities
 * ✅ Number system utilities
+* ✅ Multiplexer
 
 # TODO
-* Multiplexer
 * Demultiplexer
 * K-Map Utilities
 * and more...
