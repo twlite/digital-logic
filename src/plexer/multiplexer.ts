@@ -1,5 +1,5 @@
-import { bitsFor, generateSignals, isPowerOfTwo } from '../utils/bits';
-import { toExpression } from '../utils/expression';
+import { bitsFor, generateSignals, isPowerOfTwo } from "../utils/bits";
+import { toExpression } from "../utils/expression";
 /**
  * Multiplexer
  * @param {number} n Input lines. Must be 2^n
@@ -13,13 +13,13 @@ import { toExpression } from '../utils/expression';
 export function multiplexer(n: number) {
     if (!isPowerOfTwo(n))
         throw new TypeError(
-            'Number of input lines must be 2^n and greater than one.'
+            "Number of input lines must be 2^n and greater than one."
         );
 
     const numOfSelectLine = bitsFor(n, 2);
     const input = generateSignals(numOfSelectLine);
 
-    let logicalExpression = '';
+    let logicalExpression = "";
     const results = Array.from({ length: n }, (_, i) => {
         const output = `X${i}`;
         const exp = toExpression(input[i]) + output;
