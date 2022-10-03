@@ -21,9 +21,9 @@ $ npm install digital-logic
 * ✅ Bits utilities
 * ✅ Number system utilities
 * ✅ Multiplexer
+* ✅ Demultiplexer
 
 # TODO
-* Demultiplexer
 * K-Map Utilities
 * and more...
 
