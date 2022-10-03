@@ -7,4 +7,5 @@ export * as NumberUtils from "./utils/numbers";
 export * as Encoder from "./coder/encoder";
 export * as Decoder from "./coder/decoder";
 export * as Multiplexer from './plexer/multiplexer';
+export * as Demultiplexer from './plexer/demultiplexer';
 
