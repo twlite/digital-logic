@@ -22,6 +22,7 @@ $ npm install digital-logic
 * ✅ Number system utilities
 * ✅ Multiplexer
 * ✅ Demultiplexer
+* ✅ Magnitude Comparator
 
 # TODO
 * K-Map Utilities
