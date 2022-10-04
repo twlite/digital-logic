@@ -13,7 +13,8 @@ import { toExpression } from "../utils/expression";
  */
 
 export function demultiplexer(n: number) {
-    if (!isPowerOfTwo(n)) throw new TypeError("For 1 * 2^n demultiplexer, input must be 2^n");
+    if (!isPowerOfTwo(n))
+        throw new TypeError("For 1 * 2^n demultiplexer, input must be 2^n");
 
     const numOfSelectLine = bitsFor(n, 2);
     const input = generateSignals(numOfSelectLine);

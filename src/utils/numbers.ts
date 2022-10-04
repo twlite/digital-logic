@@ -40,3 +40,20 @@ export function binaryToGreyCode(n: number): number {
 export function toBinary(n: number): number {
     return parseInt(n.toString(2));
 }
+
+/**
+ * Converts the given binary number into Excess-3 Code
+ * @param n The binary number
+ */
+export function binaryToExcess3(n: number): number {
+    const decimal = parseInt(`${n}`, 2);
+    const num = decimal.toString().length;
+    const pre = `${decimal + parseInt("3".repeat(num))}`;
+    const post = pre
+        .split("")
+        .map((m) => {
+            return parseInt(m).toString(2).padStart(4, "0");
+        })
+        .join("");
+    return parseInt(post);
+}
