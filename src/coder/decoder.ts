@@ -1,9 +1,4 @@
-import {
-    bitsFor,
-    generateSignals,
-    isPowerOfTwo,
-    maxNumbersIn
-} from "../utils/bits";
+import { generateSignals, maxNumbersIn } from "../utils/bits";
 import { toExpression } from "../utils/expression";
 
 /**

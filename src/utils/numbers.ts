@@ -1,5 +1,6 @@
 import { halfAdder } from "../adder/adder";
 import { validateBit, XOR } from "../gates/gates";
+import { binary } from "./bits";
 
 /**
  * Converts the given binary number into gray code
@@ -14,11 +15,20 @@ export function binaryToGrayCode(n: number): number {
                 validateBit(parseInt(m));
                 if (i === 0) return m;
                 if (i === 1)
-                    return String(halfAdder(parseInt(a[0]), parseInt(m)).sum);
+                    return String(
+                        halfAdder(
+                            parseInt(a[0]) as binary,
+                            parseInt(m) as binary
+                        ).sum
+                    );
                 if (a.length === i + 1)
-                    return String(XOR(parseInt(a[i - 1]), parseInt(m)));
+                    return String(
+                        XOR(parseInt(a[i - 1]) as binary, parseInt(m) as binary)
+                    );
                 if (a[i + 1] != null)
-                    return String(XOR(parseInt(m), parseInt(a[i + 1])));
+                    return String(
+                        XOR(parseInt(m) as binary, parseInt(a[i + 1]) as binary)
+                    );
             })
             .join("")
     );

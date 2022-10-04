@@ -1,3 +1,5 @@
+export type binary = 0 | 1;
+
 /**
  * Returns the number of required bits to fit the given number
  * @param n The number
@@ -27,7 +29,7 @@ export function isPowerOfTwo(n: number): boolean {
  * Generates a list of on-off signals for the given bit
  * @param bits The number of bits to use
  */
-export function generateSignals(bits = 2): number[][] {
+export function generateSignals(bits = 2): binary[][] {
     const signals: number[][] = Array.from(
         { length: maxNumbersIn(bits) },
         (_, i) => {
@@ -46,5 +48,5 @@ export function generateSignals(bits = 2): number[][] {
         return m;
     });
 
-    return signals;
+    return signals as binary[][];
 }

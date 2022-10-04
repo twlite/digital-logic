@@ -1,5 +1,5 @@
 import { AND, OR, XOR, XNOR, NAND, NOR, NOT, BUFFER } from "../gates/gates";
-import { generateSignals } from "./bits";
+import { binary, generateSignals } from "./bits";
 
 const LogicGates = {
     AND,
@@ -43,7 +43,7 @@ export function truthTable<K extends keyof typeof LogicGates | "ALL">(
                 : generateSignals(2);
         const result = signals.map((m) => {
             const val = LogicGates[gate as keyof typeof LogicGates](
-                ...(m as [number, number])
+                ...(m as [binary])
             );
             return { input: m, output: val };
         });

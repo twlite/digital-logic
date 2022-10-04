@@ -1,11 +1,12 @@
 import { AND, NOT, OR, XOR } from "../gates/gates";
+import { binary } from "../utils/bits";
 
 /**
  * The half subtractor
  * @param a Input bit
  * @param b Input bit
  */
-export function halfSubtractor(a: number, b: number) {
+export function halfSubtractor(a: binary, b: binary) {
     const difference = XOR(a, b);
     const borrow = AND(NOT(a), b);
 
@@ -18,7 +19,7 @@ export function halfSubtractor(a: number, b: number) {
  * @param b Input bit
  * @param c Borrow bit
  */
-export function fullSubtractor(a: number, b: number, c = 0) {
+export function fullSubtractor(a: binary, b: binary, c: binary = 0) {
     const hs = halfSubtractor(a, b);
     const val = halfSubtractor(hs.difference, c);
 

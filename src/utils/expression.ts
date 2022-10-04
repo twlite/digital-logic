@@ -1,4 +1,5 @@
 import { validateBit } from "../gates/gates";
+import { binary } from "./bits";
 
 /**
  * Default expression notation list
@@ -12,7 +13,7 @@ export const ExprRegex = /^[A-Za-z]{1}'?$/;
  * @param signals The signal list
  * @param notation The notation list
  */
-export function transform(signals: number[], notation = DefaultExprNotation) {
+export function transform(signals: binary[], notation = DefaultExprNotation) {
     validateBit(...signals);
 
     return signals.map((m, i) => {
@@ -28,7 +29,7 @@ export function transform(signals: number[], notation = DefaultExprNotation) {
  * @param notation The notation
  */
 export function toExpression(
-    signals: number[],
+    signals: binary[],
     notation = DefaultExprNotation
 ) {
     const res = transform(signals, notation);
