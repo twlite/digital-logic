@@ -9,3 +9,4 @@ export * as Decoder from "./coder/decoder";
 export * as Multiplexer from "./plexer/multiplexer";
 export * as Demultiplexer from "./plexer/demultiplexer";
 export * as Comparator from "./comparator/magnitudeComparator";
+export * as ProgrammableLogicArray from "./programmableLogicArray/programmableLogicArray";
