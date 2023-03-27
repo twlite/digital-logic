@@ -3,7 +3,7 @@ import { binary } from "./../utils/bits";
  * Checks if the given bit is a valid bit
  * @param bit The bit
  */
-export function isValidBit(bit: number): boolean {
+export function isValidBit(bit: number): bit is binary {
     return [0, 1].includes(bit);
 }
 
